@@ -1,10 +1,12 @@
 server:
   port: 8091
+logging:
+  level:
+    root: debug
 
 spring:
   application:
     name: configServer
-
   cloud:
     config:
       server:
@@ -14,9 +16,5 @@ spring:
           username: caohh
           password: 5121305Chh
       label: master
-
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  profiles:
+    active: dev
