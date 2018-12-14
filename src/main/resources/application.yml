@@ -1,0 +1,22 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: configServer
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.it.uniex.one/uniex/config.git
+          search-paths: /**
+          username: caohh
+          password: 5121305Chh
+      label: master
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
